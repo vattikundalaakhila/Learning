@@ -23,6 +23,16 @@ section {
     padding: 3.5em 60px;
 }
 
+@media screen and (width < 920px) {
+    section {
+        padding: 3.5em 20px;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+}
+
 /* header css */
 .main_header {
     display: flex;
@@ -84,6 +94,15 @@ background-color: #fff;
 a {
     text-decoration: none;
     color: inherit;
+}
+@media screen and (width < 570px) {
+    .main_header {
+        flex-wrap: wrap;
+        padding: 10px 30px;
+        gap: 10px;
+        /* justify-content: center; */
+    }
+
 }
 .filter{
     padding: 30px 0px 30px 60px;
@@ -255,6 +274,39 @@ a {
     padding: 40px 30px;
 
    }
+
+   @media screen and (width < 920px) {
+    .hero_section {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        padding: 2em 20px;
+    }
+
+    .card_white h1 {
+        font-size: 2rem;
+    }
+
+    .card_white,
+    .gradient_card {
+        grid-area: span 1;
+    }
+
+    .card_white_bottom {
+        flex-direction: column;
+    }
+
+    .gradient_Card {
+        display: hidden;
+        max-width: auto;
+    }
+
+    .last_card {
+        grid-area: span 1;
+        flex-direction: column;
+    }
+}
+
+
    
    /* category list*/ 
    .category_list h2{
@@ -318,6 +370,29 @@ a {
  .product_container figure:nth-child(2) img {
   width: 555px;      
 }
+@media screen and (width < 920px) {
+    .category_list header {
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+    }
+
+    .category_list header button {
+        display: block;
+        margin-bottom: 1em;
+    }
+
+    .category_list .container {
+        flex-direction: column;
+        position: relative;
+    }
+
+    .category_list .container figure {
+        position: sticky;
+        top: 20px;
+    }
+}
+
 
    
 /* why us  */
@@ -348,6 +423,11 @@ a {
     height: 30px;
     margin: auto;
  }
+ @media screen and (width < 920px) {
+    .why_us .container {
+        flex-wrap: wrap;
+    }
+}
 
 /*  cta css */
 
@@ -410,6 +490,16 @@ a {
     width: 310px;
     height: 45px;
 }
+@media screen and (width < 920px) {
+
+    .cta {
+        margin: 2.5em 20px;
+    }
+
+    .cta .container .left {
+        flex-shrink: 1;
+    }
+}
 
 
 .footer_section{
@@ -439,3 +529,8 @@ a {
     display: inline-block;
 }
 
+@media  screen and (width < 920px){
+    .footer_container{
+        flex-wrap: wrap;
+    }
+}
